@@ -1,0 +1,31 @@
+AWS Configuration for Mass Emailing using AWS Lambda & SES
+
+Step 1: Set Up Amazon SES
+1. Go to AWS Console → Search for "Amazon SES".
+2. Click "Verified Identities" → "Create Identity".
+3. Select "Email Address" and enter your email.
+4. Click "Create" and verify the email from your inbox.
+
+Step 2: Create an AWS Lambda Function
+1. Go to AWS Console → Search for "Lambda".
+2. Click "Create Function" → Select "Author from Scratch".
+3. Set Function Name: `massEmailSender`
+4. Runtime: Python(latest version).
+5. Click "Create Function".
+
+Step 3: Configure IAM Permissions
+1. Go to "IAM" in AWS Console.
+2. Find the role attached to your Lambda function.
+3. Attach the policy: "AmazonSESFullAccess".
+
+Step 4: Deploy the Lambda Code
+1. Open your Lambda function.
+2. Go to the "Code" section.
+3. Replace with your Python script.
+4. Click "Deploy".
+
+Step 5: Test the Lambda Function
+1. Click "Test" in AWS Lambda.
+2. Create a test event `{}`.
+3. Click "Invoke" and check your email.
+
